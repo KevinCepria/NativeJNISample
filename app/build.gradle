@@ -15,6 +15,16 @@ android {
           moduleName "myLib"
         }
     }
+
+    splits {
+        abi {
+            enable true
+            universalApk true
+        }
+    }
+
+    project.ext.versionCodes = ['ameabi-v7a':1,'x86':2]
+
     buildTypes {
         release {
             minifyEnabled false
